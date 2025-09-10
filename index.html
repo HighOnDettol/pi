@@ -22,7 +22,7 @@
             padding: 20px;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center; /* Center vertically for the square shape */
             min-height: 100vh;
             background: radial-gradient(circle at 10% 20%, var(--secondary-color), #d1d8e0);
             box-sizing: border-box;
@@ -33,6 +33,7 @@
         .poster-container {
             width: 100%;
             max-width: 800px;
+            aspect-ratio: 1 / 1; /* Makes it a perfect square */
             background-color: #ffffff;
             border-radius: 30px;
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
@@ -42,6 +43,7 @@
             position: relative;
             box-sizing: border-box;
             border: 8px dashed var(--blue-light);
+            overflow: hidden; /* Hide overflow to prevent images from breaking out */
         }
 
         .header-section {
@@ -49,13 +51,13 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
             border-bottom: 3px solid var(--accent-color);
         }
 
         .header-section img {
-            width: 150px;
+            width: 120px;
             height: auto;
             border-radius: 50%;
             border: 6px solid var(--accent-color);
@@ -64,7 +66,7 @@
 
         .header-section h1 {
             font-family: 'Fredoka One', cursive;
-            font-size: 3.5em;
+            font-size: 3em;
             color: var(--primary-color);
             margin: 10px 0 0;
             letter-spacing: 2px;
@@ -72,13 +74,13 @@
         }
 
         .header-section .tagline {
-            font-size: 1.5em;
+            font-size: 1.2em;
             color: var(--highlight-color);
             font-weight: 700;
         }
         
         .header-section .location {
-            font-size: 0.9em;
+            font-size: 0.8em;
             font-weight: 600;
             color: #7f8c8d;
             margin-top: 5px;
@@ -87,65 +89,62 @@
         .admission-tag {
             background-color: var(--highlight-color);
             color: white;
-            padding: 15px 30px;
+            padding: 10px 20px;
             border-radius: 50px;
             font-weight: bold;
-            font-size: 1.5em;
+            font-size: 1.2em;
             text-align: center;
-            margin: 20px auto;
+            margin: 15px auto;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         .info-section {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
+            grid-template-columns: 1fr; /* Single column for better flow */
+            gap: 15px;
             padding: 0 10px;
         }
 
         .info-card {
             background-color: var(--secondary-color);
-            padding: 25px;
+            padding: 20px;
             border-radius: 15px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            margin-bottom: 20px;
         }
 
         .info-card h2 {
             font-family: 'Fredoka One', cursive;
-            font-size: 1.6em;
+            font-size: 1.4em;
             color: var(--primary-color);
             margin-top: 0;
             text-align: center;
             border-bottom: 2px dashed var(--accent-color);
-            padding-bottom: 10px;
-            margin-bottom: 15px;
+            padding-bottom: 8px;
+            margin-bottom: 12px;
         }
 
         .info-card p, .info-card ul {
-            font-size: 0.95em;
+            font-size: 0.85em;
             color: var(--text-dark);
+            text-align: center;
         }
         
-        .info-card p {
-            text-align: justify;
-        }
-
         .facilities-list {
             list-style: none;
             padding: 0;
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap; /* Allow wrapping */
+            justify-content: center;
             gap: 8px;
         }
 
         .facilities-list li {
             background-color: var(--blue-light);
             color: white;
-            padding: 10px 15px;
+            padding: 8px 12px;
             border-radius: 25px;
             font-weight: 600;
-            font-size: 0.95em;
+            font-size: 0.8em;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
             display: flex;
             align-items: center;
@@ -153,28 +152,27 @@
 
         .facilities-list li.green { background-color: var(--green-light); }
         .facilities-list li.pink { background-color: var(--pink-light); }
-        .facilities-list li span.emoji { margin-right: 10px; }
 
         .image-gallery {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 15px;
-            margin-top: 20px;
+            gap: 10px;
+            margin-top: 15px;
         }
 
         .image-gallery img {
             width: 100%;
-            height: 180px; /* Increased height for better visibility */
+            height: 120px; /* Adjusted height for square aspect ratio */
             object-fit: cover;
-            border-radius: 15px;
+            border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             border: 4px solid var(--accent-color);
         }
 
         .contact-info {
             text-align: center;
-            margin-top: 30px;
-            padding: 20px;
+            margin-top: 20px;
+            padding: 15px;
             background-color: var(--primary-color);
             color: var(--text-light);
             border-radius: 15px;
@@ -183,7 +181,7 @@
         
         .contact-info p {
             margin: 0;
-            font-size: 1.3em;
+            font-size: 1.2em;
             font-weight: 600;
         }
         
@@ -192,43 +190,9 @@
             text-decoration: none;
             font-weight: 600;
         }
-
-        @media (max-width: 768px) {
-            .poster-container {
-                padding: 15px;
-                max-width: 100%;
-                border-width: 5px;
-            }
-            .header-section h1 {
-                font-size: 2.5em;
-            }
-            .header-section .tagline {
-                font-size: 1.2em;
-            }
-            .admission-tag {
-                font-size: 1.2em;
-                padding: 10px 20px;
-            }
-            .info-section {
-                grid-template-columns: 1fr;
-            }
-            .info-card {
-                padding: 20px;
-            }
-            .image-gallery {
-                grid-template-columns: 1fr;
-            }
-            .image-gallery img {
-                height: 200px;
-            }
-            .contact-info p {
-                font-size: 1.1em;
-            }
-        }
     </style>
 </head>
 <body>
-
     <div class="poster-container">
         <div class="header-section">
             <img src="https://prabhatinstitute.co.in/images/logo.png" alt="Prabhat Institute Logo">
@@ -238,13 +202,28 @@
         </div>
 
         <div class="admission-tag">
-            ADMISSION OPEN FOR NURSERY TO CLASS XII
+            ADMISSIONS OPEN
         </div>
 
         <div class="info-section">
             <div class="info-card">
+                <h2>Features & Facilities</h2>
+                <ul class="facilities-list">
+                    <li>Individual Care</li>
+                    <li>Activity Based Learning</li>
+                    <li>Learning with SMP App</li>
+                    <li>Weekly Tests in App</li>
+                    <li>Creative Projects</li>
+                    <li>Music & Dance</li>
+                    <li>Computer Classes</li>
+                    <li>Yoga Classes</li>
+                    <li>Sports Classes</li>
+                </ul>
+            </div>
+            
+            <div class="info-card">
                 <h2>Our Mission & Promise</h2>
-                <p>Established in 2020, Prabhat Institute is an English medium CBSE school (NCERT curriculum) committed to providing modern and affordable education. We aim to instill strong moral values, guiding our students to become responsible and compassionate members of society.</p>
+                <p>Established in 2020, our CBSE school offers a modern, affordable education. We provide strong academic and moral values, guiding students to become responsible and compassionate members of society.</p>
                 <div class="image-gallery">
                     <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="Children in classroom">
                     <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" alt="Students with teacher">
@@ -252,52 +231,10 @@
                     <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" alt="Happy students">
                 </div>
             </div>
-
-            <div class="info-card">
-                <h2>Features & Facilities</h2>
-                <ul class="facilities-list">
-                    <li style="background-color: var(--blue-light);">
-                        <span class="emoji">💖</span>
-                        <span>Individual Care</span>
-                    </li>
-                    <li style="background-color: var(--green-light);">
-                        <span class="emoji">💡</span>
-                        <span>Activity Based Learning</span>
-                    </li>
-                    <li style="background-color: var(--pink-light);">
-                        <span class="emoji">📱</span>
-                        <span>Learning with SMP App</span>
-                    </li>
-                    <li style="background-color: var(--blue-light);">
-                        <span class="emoji">✅</span>
-                        <span>Weekly Tests in App</span>
-                    </li>
-                    <li style="background-color: var(--green-light);">
-                        <span class="emoji">🎨</span>
-                        <span>Creative Projects</span>
-                    </li>
-                    <li style="background-color: var(--pink-light);">
-                        <span class="emoji">🎵</span>
-                        <span>Music & Dance Classes</span>
-                    </li>
-                    <li style="background-color: var(--blue-light);">
-                        <span class="emoji">💻</span>
-                        <span>Computer Classes</span>
-                    </li>
-                    <li style="background-color: var(--green-light);">
-                        <span class="emoji">🧘</span>
-                        <span>Yoga Classes</span>
-                    </li>
-                    <li style="background-color: var(--pink-light);">
-                        <span class="emoji">⚽</span>
-                        <span>Sports Classes</span>
-                    </li>
-                </ul>
-            </div>
         </div>
 
         <div class="contact-info">
-            <p>For more details, please contact us at: <a href="tel:+917679779511">+91-7679779511</a></p>
+            <p>Contact Us: <a href="tel:+917679779511">+91-7679779511</a></p>
         </div>
     </div>
 </body>
