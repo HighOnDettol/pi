@@ -76,14 +76,14 @@
             color: var(--highlight-color);
             font-weight: 700;
         }
-
+        
         .header-section .location {
             font-size: 1em;
             font-weight: 600;
             color: #7f8c8d;
             margin-top: 10px;
         }
-
+        
         .cta-section {
             text-align: center;
             margin-top: 20px;
@@ -215,91 +215,17 @@
             color: white;
             text-decoration: underline;
         }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 100;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.5);
-            backdrop-filter: blur(5px);
-            justify-content: center;
-            align-items: center;
-            animation: fadeIn 0.3s ease;
-        }
-
-        .modal-content {
-            background-color: #fff;
-            margin: auto;
-            padding: 30px;
-            border-radius: 15px;
-            width: 90%;
-            max-width: 600px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            position: relative;
-            animation: slideIn 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
-        }
-
-        .close-button {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            color: var(--text-dark);
-            font-size: 2em;
+        
+        .admission-tag {
+            background-color: var(--highlight-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
             font-weight: bold;
-            cursor: pointer;
-        }
-
-        .modal-content h2 {
-            font-family: 'Fredoka One', cursive;
-            color: var(--primary-color);
+            font-size: 1.2em;
             text-align: center;
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 10px;
             margin-bottom: 20px;
-        }
-
-        .modal-content p {
-            font-size: 1em;
-            color: #555;
-            text-align: justify;
-        }
-
-        .modal-content ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .modal-content ul li {
-            background: var(--secondary-color);
-            padding: 10px 15px;
-            margin-bottom: 8px;
-            border-radius: 8px;
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-        }
-        .modal-content ul li:before {
-            content: "•";
-            color: var(--accent-color);
-            font-weight: bold;
-            display: inline-block;
-            width: 1em;
-            margin-left: -1em;
-        }
-
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideIn {
-            from { transform: translateY(-50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         @media (max-width: 768px) {
@@ -340,87 +266,82 @@
             <p class="location">Saktinagar, Krishnanagar, Dist- Nadia, West Bengal</p>
         </div>
 
+        <div class="admission-tag">
+            <p>ADMISSION OPEN FOR NURSERY TO CLASS XII</p>
+        </div>
+
         <div class="info-section">
             <div class="left-panel">
                 <div class="info-card">
                     <h2>Our Unique Approach</h2>
-                    <p>At Prabhat Institute, we believe in igniting curiosity and fostering a love for learning. We provide a nurturing environment where every child receives **individual care** and grows to their full potential.</p>
+                    <p>Established in 2020, Prabhat Institute is an English medium CBSE school committed to providing a modern and affordable education rooted in strong academic and moral values.</p>
+                    <p>Dedicated to the legacy of Dr. Prabhat Kumar Saha, we promise a sound academic atmosphere with well-trained teachers who offer supplementary sessions and personalized care.</p>
                 </div>
                 <div class="info-card">
-                    <h2>Features that Spark Joy</h2>
+                    <h2>Features & Facilities</h2>
                     <ul class="facilities-list">
                         <li style="background-color: var(--blue-light);">
                             <span class="emoji">💡</span>
-                            <span>Activity Based Learning</span>
+                            <span>Individual Care</span>
                         </li>
                         <li style="background-color: var(--green-light);">
-                            <span class="emoji">📱</span>
-                            <span>Interactive Learning with SMP App</span>
+                            <span class="emoji">✏️</span>
+                            <span>Activity Based Learning</span>
                         </li>
                         <li style="background-color: var(--pink-light);">
+                            <span class="emoji">📱</span>
+                            <span>Learning with SMP App</span>
+                        </li>
+                        <li style="background-color: var(--blue-light);">
+                            <span class="emoji">✅</span>
+                            <span>Weekly Tests in App</span>
+                        </li>
+                        <li style="background-color: var(--green-light);">
                             <span class="emoji">🎨</span>
-                            <span>Creative Projects & Exploration</span>
+                            <span>Creative Projects</span>
                         </li>
                     </ul>
                 </div>
             </div>
 
             <div class="right-panel">
+                <div class="info-card">
+                    <h2>Beyond the Classroom</h2>
+                    <ul class="facilities-list">
+                         <li style="background-color: var(--pink-light);">
+                            <span class="emoji">🎵</span>
+                            <span>Music Classes</span>
+                        </li>
+                        <li style="background-color: var(--blue-light);">
+                            <span class="emoji">💃</span>
+                            <span>Dance Classes</span>
+                        </li>
+                        <li style="background-color: var(--green-light);">
+                            <span class="emoji">💻</span>
+                            <span>Computer Classes</span>
+                        </li>
+                        <li style="background-color: var(--pink-light);">
+                            <span class="emoji">🧘</span>
+                            <span>Yoga Classes</span>
+                        </li>
+                        <li style="background-color: var(--blue-light);">
+                            <span class="emoji">⚽</span>
+                            <span>Sports Classes</span>
+                        </li>
+                    </ul>
+                </div>
                 <div class="image-gallery">
                     <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="Children in classroom">
                     <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" alt="Students with teacher">
                     <img src="https://i.pinimg.com/736x/0d/08/d4/0d08d4f79e032fe06f53c0a758b6e222.jpg" alt="Kids engaging in activity">
                     <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" alt="Happy students">
                 </div>
-                
-                <div class="info-card" style="margin-top: 20px;">
-                    <h2>Beyond the Classroom</h2>
-                    <p>Our students discover their passions through a variety of extracurriculars including: **Music, Dance, Computer, Yoga, and Sports Classes**.</p>
-                </div>
             </div>
-        </div>
-        
-        <div class="cta-section">
-            <button class="cta-button" onclick="openModal()">Our Mission</button>
-            <button class="cta-button" onclick="downloadPoster()">Download Poster</button>
         </div>
 
         <div class="contact-info">
-            <p>Admission is Open. For details, call: <a href="tel:+917679779511">+91-7679779511</a></p>
+            <p>For more details, contact us at: <a href="tel:+917679779511">+91-7679779511</a></p>
         </div>
     </div>
-
-    <!-- Modal for "Our Mission" -->
-    <div id="visionModal" class="modal">
-        <div class="modal-content">
-            <span class="close-button" onclick="closeModal()">&times;</span>
-            <h2>Our Mission & Promise</h2>
-            <p>Established on 2020, Prabhat Institute is an English medium CBSE (NCERT curriculum) school, dedicated to carrying forward the educational legacy of Dr. Prabhat Kumar Saha. We promise to impart modern and affordable education in a sound academic atmosphere with the help of well-trained and dedicated teachers.</p>
-            <p>To ensure academic excellence, we offer supplementary tutorial sessions after school hours, enabling students to consolidate their knowledge and excel academically. Our core mission is to instill strong moral values, guiding our students to become responsible and compassionate members of society.</p>
-        </div>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <script>
-        function openModal() {
-            const modal = document.getElementById('visionModal');
-            modal.style.display = 'flex';
-        }
-
-        function closeModal() {
-            const modal = document.getElementById('visionModal');
-            modal.style.display = 'none';
-        }
-
-        function downloadPoster() {
-            const element = document.getElementById('posterContent');
-            html2canvas(element, { scale: 2 }).then(canvas => {
-                const link = document.createElement('a');
-                link.download = 'prabhat-institute-poster.jpg';
-                link.href = canvas.toDataURL('image/jpeg', 0.9);
-                link.click();
-            });
-        }
-    </script>
 </body>
 </html>
