@@ -3,38 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prabhat Institute - A Legacy of Learning</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Prabhat Institute - Where Learning is Fun</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #2c3e50; /* Navy Blue */
-            --accent-color: #f1c40f; /* Gold */
-            --secondary-color: #ecf0f1; /* Light Gray */
-            --background-light: #f4f7f6;
-            --text-dark: #34495e;
-            --text-light: #ecf0f1;
+            --primary-color: #2b5876; /* Dark Blue */
+            --accent-color: #f1c40f; /* Yellow Gold */
+            --secondary-color: #f6f9fc; /* Off-White */
+            --highlight-color: #f39c12; /* Orange */
+            --blue-light: #83c7e6;
+            --green-light: #a2d729;
+            --pink-light: #e683a4;
         }
 
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, var(--background-light), #d1d8e0);
+            background: radial-gradient(circle at 10% 20%, var(--secondary-color), var(--background-light), #cfe3f1);
             display: flex;
             justify-content: center;
             align-items: flex-start;
             min-height: 100vh;
-            color: var(--text-dark);
+            color: var(--primary-color);
             box-sizing: border-box;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .poster-container {
             width: 100%;
             max-width: 900px;
             background-color: #ffffff;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            border-radius: 30px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
             padding: 30px;
             display: flex;
             flex-direction: column;
@@ -48,83 +50,43 @@
             align-items: center;
             text-align: center;
             padding-bottom: 20px;
-            border-bottom: 2px solid var(--secondary-color);
             margin-bottom: 20px;
+            position: relative;
         }
 
         .header-section img {
-            width: 120px;
+            width: 150px;
             height: auto;
             border-radius: 50%;
-            border: 5px solid var(--accent-color);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 8px solid var(--accent-color);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
         .header-section h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3em;
+            font-family: 'Fredoka One', cursive;
+            font-size: 3.5em;
             color: var(--primary-color);
             margin: 15px 0 5px;
-            letter-spacing: 1px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
 
         .header-section .tagline {
-            font-size: 1.2em;
-            color: var(--text-dark);
-            font-weight: 600;
+            font-size: 1.5em;
+            color: var(--highlight-color);
+            font-weight: 700;
         }
 
         .header-section .location {
-            font-size: 0.9em;
-            font-weight: 400;
+            font-size: 1em;
+            font-weight: 600;
             color: #7f8c8d;
             margin-top: 10px;
         }
 
-        .content-sections {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 20px;
-        }
-
-        .text-section {
-            text-align: center;
-            background-color: var(--secondary-color);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-
-        .text-section p {
-            font-size: 1.1em;
-            margin: 0;
-        }
-
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 15px;
-            margin-top: 20px;
-            justify-content: center;
-        }
-
-        .image-gallery img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .image-gallery img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-        }
-
         .cta-section {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 20px;
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -150,6 +112,89 @@
             transform: translateY(-3px);
         }
 
+        .info-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .left-panel, .right-panel {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .info-card {
+            background-color: var(--secondary-color);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+        }
+
+        .info-card h2 {
+            font-family: 'Fredoka One', cursive;
+            font-size: 1.8em;
+            color: var(--primary-color);
+            margin-top: 0;
+            text-align: center;
+            border-bottom: 2px dashed var(--accent-color);
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        .info-card p, .info-card ul {
+            font-size: 1em;
+            color: var(--text-dark);
+        }
+
+        .facilities-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .facilities-list li {
+            background-color: var(--blue-light);
+            color: white;
+            margin-bottom: 10px;
+            padding: 12px 15px;
+            border-radius: 10px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .facilities-list li.green { background-color: var(--green-light); }
+        .facilities-list li.pink { background-color: var(--pink-light); }
+
+        .facilities-list li span {
+            margin-right: 10px;
+        }
+
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .image-gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border: 3px solid var(--accent-color);
+        }
+
+        .image-gallery img:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
         .contact-info {
             text-align: center;
             margin-top: 30px;
@@ -210,7 +255,7 @@
         }
 
         .modal-content h2 {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Fredoka One', cursive;
             color: var(--primary-color);
             text-align: center;
             border-bottom: 2px solid var(--accent-color);
@@ -247,7 +292,6 @@
             margin-left: -1em;
         }
 
-
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -263,10 +307,13 @@
                 padding: 15px;
             }
             .header-section h1 {
-                font-size: 2.2em;
+                font-size: 2.5em;
             }
             .header-section .tagline {
-                font-size: 1em;
+                font-size: 1.2em;
+            }
+            .info-section {
+                grid-template-columns: 1fr;
             }
             .cta-button {
                 font-size: 1em;
@@ -274,6 +321,12 @@
             }
             .cta-section {
                 flex-direction: column;
+            }
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+            .image-gallery img {
+                height: 200px;
             }
         }
     </style>
@@ -283,43 +336,67 @@
         <div class="header-section">
             <img src="https://prabhatinstitute.co.in/images/logo.png" alt="Prabhat Institute Logo">
             <h1>PRABHAT INSTITUTE</h1>
-            <p class="tagline">A Legacy of Modern Education</p>
+            <p class="tagline">Where Learning is an Adventure!</p>
             <p class="location">Saktinagar, Krishnanagar, Dist- Nadia, West Bengal</p>
         </div>
 
-        <div class="text-section">
-            <p>Established in 2020, Prabhat Institute is an English medium CBSE school committed to providing a modern and affordable education rooted in strong academic and moral values.</p>
-        </div>
+        <div class="info-section">
+            <div class="left-panel">
+                <div class="info-card">
+                    <h2>Our Unique Approach</h2>
+                    <p>At Prabhat Institute, we believe in igniting curiosity and fostering a love for learning. We provide a nurturing environment where every child receives **individual care** and grows to their full potential.</p>
+                </div>
+                <div class="info-card">
+                    <h2>Features that Spark Joy</h2>
+                    <ul class="facilities-list">
+                        <li style="background-color: var(--blue-light);">
+                            <span class="emoji">💡</span>
+                            <span>Activity Based Learning</span>
+                        </li>
+                        <li style="background-color: var(--green-light);">
+                            <span class="emoji">📱</span>
+                            <span>Interactive Learning with SMP App</span>
+                        </li>
+                        <li style="background-color: var(--pink-light);">
+                            <span class="emoji">🎨</span>
+                            <span>Creative Projects & Exploration</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
-        <div class="image-gallery">
-            <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="Children in classroom">
-            <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" alt="Students with teacher">
-            <img src="https://i.pinimg.com/736x/0d/08/d4/0d08d4f79e032fe06f53c0a758b6e222.jpg" alt="Kids engaging in activity">
-            <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" alt="Happy students">
+            <div class="right-panel">
+                <div class="image-gallery">
+                    <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="Children in classroom">
+                    <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" alt="Students with teacher">
+                    <img src="https://i.pinimg.com/736x/0d/08/d4/0d08d4f79e032fe06f53c0a758b6e222.jpg" alt="Kids engaging in activity">
+                    <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" alt="Happy students">
+                </div>
+                
+                <div class="info-card" style="margin-top: 20px;">
+                    <h2>Beyond the Classroom</h2>
+                    <p>Our students discover their passions through a variety of extracurriculars including: **Music, Dance, Computer, Yoga, and Sports Classes**.</p>
+                </div>
+            </div>
         </div>
         
         <div class="cta-section">
-            <button class="cta-button" onclick="openModal()">Our Vision</button>
+            <button class="cta-button" onclick="openModal()">Our Mission</button>
             <button class="cta-button" onclick="downloadPoster()">Download Poster</button>
         </div>
 
         <div class="contact-info">
-            <p>Admission going on. For more details, <a href="tel:+917679779511">+91-7679779511</a></p>
+            <p>Admission is Open. For details, call: <a href="tel:+917679779511">+91-7679779511</a></p>
         </div>
     </div>
 
-    <!-- Modal for "Our Vision" -->
+    <!-- Modal for "Our Mission" -->
     <div id="visionModal" class="modal">
         <div class="modal-content">
             <span class="close-button" onclick="closeModal()">&times;</span>
-            <h2>Our Vision and Promise</h2>
-            <p>At Prabhat Institute, we are dedicated to carrying forward the rich educational legacy of Dr. Prabhat Kumar Saha. Our promise is to provide a sound academic atmosphere with the help of well-trained and dedicated teachers who offer personalized guidance to every student.</p>
-            <p>To ensure academic excellence, we offer:</p>
-            <ul>
-                <li>Supplementary tutorial sessions after school hours.</li>
-                <li>Support to help students consolidate their knowledge.</li>
-            </ul>
-            <p>Our core mission is to instill strong moral values, guiding our students to become responsible and compassionate individuals who can contribute positively to society.</p>
+            <h2>Our Mission & Promise</h2>
+            <p>Established on 2020, Prabhat Institute is an English medium CBSE (NCERT curriculum) school, dedicated to carrying forward the educational legacy of Dr. Prabhat Kumar Saha. We promise to impart modern and affordable education in a sound academic atmosphere with the help of well-trained and dedicated teachers.</p>
+            <p>To ensure academic excellence, we offer supplementary tutorial sessions after school hours, enabling students to consolidate their knowledge and excel academically. Our core mission is to instill strong moral values, guiding our students to become responsible and compassionate members of society.</p>
         </div>
     </div>
 
