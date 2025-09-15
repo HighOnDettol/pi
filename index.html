@@ -8,112 +8,156 @@
 
     body {
       margin: 0;
-      padding: 0;
+      padding: 20px;
       font-family: 'Poppins', sans-serif;
       background: url('https://www.shutterstock.com/image-vector/group-kids-playing-game-on-600nw-1681963759.jpg') no-repeat center center;
       background-size: cover;
+      background-attachment: fixed;
     }
 
     .poster {
       width: 210mm;
       height: 297mm;
       margin: auto;
-      background: rgba(255, 255, 255, 0.92);
-      padding: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 0;
       box-sizing: border-box;
-      border: 6px dotted #87cefa;
+      border: 3px dashed #87ceeb;
       position: relative;
+      border-radius: 15px;
+      overflow: hidden;
     }
 
     .header {
       text-align: center;
-      margin-bottom: 15px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
     }
 
     .header img {
-      width: 120px;
+      width: 80px;
+      height: 80px;
       margin-bottom: 10px;
+      border-radius: 50%;
+      border: 3px solid #ff6b35;
     }
 
     .header h1 {
       font-family: 'Baloo 2', cursive;
-      font-size: 34px;
-      color: #1f3c88;
-      margin: 5px 0;
+      font-size: 36px;
+      color: #2c5282;
+      margin: 10px 0 5px 0;
+      font-weight: 600;
+      letter-spacing: 2px;
     }
 
     .header h2 {
       font-size: 18px;
       color: #ff6b35;
-      margin: 5px 0 15px 0;
+      margin: 5px 0 10px 0;
+      font-weight: 400;
+    }
+
+    .header .address {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
     }
 
     .admission-btn {
       display: inline-block;
-      background: #ff6b35;
+      background: linear-gradient(45deg, #ff6b35, #ff8c42);
       color: #fff;
       font-weight: bold;
-      padding: 14px 30px;
-      border-radius: 30px;
+      padding: 12px 35px;
+      border-radius: 25px;
       text-decoration: none;
-      font-size: 18px;
-      margin-top: 10px;
+      font-size: 16px;
+      box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .admission-btn:hover {
+      transform: translateY(-2px);
     }
 
     .content {
       display: flex;
       justify-content: space-between;
-      margin-top: 30px;
+      padding: 20px;
+      gap: 20px;
+      height: calc(100% - 200px);
     }
 
-    .box {
-      width: 48%;
-      background: #f9f9f9;
+    .left-box {
+      width: 45%;
+      background: rgba(255, 255, 255, 0.9);
       padding: 20px;
       border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .right-box {
+      width: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
 
     .box h3 {
       font-family: 'Baloo 2', cursive;
       font-size: 20px;
-      color: #1f3c88;
-      margin-bottom: 15px;
+      color: #2c5282;
+      margin-bottom: 20px;
       text-align: center;
+      border-bottom: 2px dotted #ff6b35;
+      padding-bottom: 10px;
     }
 
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      justify-content: center;
+    .features-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 20px;
     }
 
-    .features span {
-      background: #e3f2fd;
-      color: #1f3c88;
-      padding: 8px 14px;
+    .feature-item {
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      color: #1565c0;
+      padding: 10px 12px;
       border-radius: 20px;
-      font-size: 14px;
+      font-size: 13px;
+      text-align: center;
+      font-weight: 500;
+      border: 1px solid #90caf9;
     }
 
     .mission {
       font-size: 14px;
-      line-height: 1.6;
+      line-height: 1.7;
       text-align: justify;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      color: #444;
     }
 
-    .photos {
+    .photos-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px;
     }
 
-    .photos img {
+    .photos-grid img {
       width: 100%;
+      height: 80px;
+      object-fit: cover;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .photos-grid img:hover {
+      transform: scale(1.05);
     }
 
     .footer {
@@ -122,31 +166,35 @@
       left: 0;
       width: 100%;
       text-align: center;
-      background: #1f3c88;
+      background: linear-gradient(135deg, #2c5282, #3182ce);
       color: #fff;
-      padding: 14px;
+      padding: 15px;
       font-size: 16px;
-      font-weight: bold;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
+      font-weight: 600;
+      border-radius: 0 0 12px 12px;
     }
 
-    .footer span {
-      margin: 0 12px;
-      display: inline-flex;
-      align-items: center;
+    .footer .contact {
+      display: inline-block;
+      margin: 0 15px;
     }
 
-    .footer span::before {
-      margin-right: 6px;
+    .footer .phone::before {
+      content: "📞 ";
+      margin-right: 5px;
     }
 
-    .footer .call::before {
-      content: "📞";
-    }
-
-    .footer .whatsapp::before {
-      content: "💬";
+    /* Decorative elements */
+    .poster::before {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      background: linear-gradient(45deg, #ff6b35, #87ceeb, #ff6b35, #87ceeb);
+      z-index: -1;
+      border-radius: 18px;
     }
   </style>
 </head>
@@ -156,45 +204,45 @@
       <img src="https://prabhatinstitute.co.in/images/logo.png" alt="School Logo">
       <h1>PRABHAT INSTITUTE</h1>
       <h2>A Fun Place to Learn & Grow!</h2>
-      <p>Saktinagar, Krishnanagar, Dist- Nadia, West Bengal</p>
+      <p class="address">Saktinagar, Krishnanagar, Dist- Nadia, West Bengal</p>
       <a href="#" class="admission-btn">ADMISSIONS OPEN</a>
     </div>
 
     <div class="content">
-      <div class="box">
+      <div class="left-box">
         <h3>Features & Facilities</h3>
-        <div class="features">
-          <span>Individual Care</span>
-          <span>Activity Based Learning</span>
-          <span>Learning with SMP App</span>
-          <span>Weekly Tests in App</span>
-          <span>Creative Projects</span>
-          <span>Music & Dance</span>
-          <span>Computer Classes</span>
-          <span>Yoga Classes</span>
-          <span>Sports Classes</span>
+        <div class="features-grid">
+          <div class="feature-item">Individual Care</div>
+          <div class="feature-item">Activity Based Learning</div>
+          <div class="feature-item">Learning with SMP App</div>
+          <div class="feature-item">Weekly Tests in App</div>
+          <div class="feature-item">Creative Projects</div>
+          <div class="feature-item">Music & Dance</div>
+          <div class="feature-item">Computer Classes</div>
+          <div class="feature-item">Yoga Classes</div>
+          <div class="feature-item">Sports Classes</div>
         </div>
       </div>
 
-      <div class="box">
+      <div class="right-box">
         <h3>Our Mission & Photos</h3>
         <p class="mission">
           Established in 2020, our CBSE school offers a modern, affordable education. 
-          We provide strong academic and moral values, guiding students to become responsible 
-          and compassionate members of society.
+          We provide strong academic and moral values, guiding students to become 
+          responsible and compassionate members of society.
         </p>
-        <div class="photos">
-          <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="School Photo 1">
-          <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" alt="School Photo 2">
-          <img src="https://i.pinimg.com/736x/0d/08/d4/0d08d4f79e032fe06f53c0a758b6e222.jpg" alt="School Photo 3">
-          <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" alt="School Photo 4">
+        <div class="photos-grid">
+          <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="School Activity 1">
+          <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" alt="School Activity 2">
+          <img src="https://i.pinimg.com/736x/0d/08/d4/0d08d4f79e032fe06f53c0a758b6e222.jpg" alt="School Activity 3">
+          <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" alt="School Activity 4">
         </div>
       </div>
     </div>
 
     <div class="footer">
-      <span class="call">+91-7679779511</span>
-      <span class="whatsapp">+91-9936233366</span>
+      <span class="contact phone">+91-7679779511</span>
+      <span class="contact phone">+91-9936233366</span>
     </div>
   </div>
 </body>
