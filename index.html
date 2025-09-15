@@ -12,17 +12,16 @@
       font-family: 'Poppins', sans-serif;
       background: url('https://www.shutterstock.com/image-vector/group-kids-playing-game-on-600nw-1681963759.jpg') no-repeat center center;
       background-size: cover;
-      background-attachment: fixed;
     }
 
     .poster {
       width: 210mm;
       height: 297mm;
       margin: auto;
-      background: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 0 15px rgba(0,0,0,0.15);
+      background: rgba(255, 255, 255, 0.92);
       padding: 20px;
       box-sizing: border-box;
+      border: 6px dotted #87cefa;
       position: relative;
     }
 
@@ -38,13 +37,13 @@
 
     .header h1 {
       font-family: 'Baloo 2', cursive;
-      font-size: 32px;
+      font-size: 34px;
       color: #1f3c88;
       margin: 5px 0;
     }
 
     .header h2 {
-      font-size: 16px;
+      font-size: 18px;
       color: #ff6b35;
       margin: 5px 0 15px 0;
     }
@@ -54,10 +53,11 @@
       background: #ff6b35;
       color: #fff;
       font-weight: bold;
-      padding: 12px 28px;
+      padding: 14px 30px;
       border-radius: 30px;
       text-decoration: none;
       font-size: 18px;
+      margin-top: 10px;
     }
 
     .content {
@@ -118,15 +118,35 @@
 
     .footer {
       position: absolute;
-      bottom: 15px;
+      bottom: 0;
       left: 0;
       width: 100%;
       text-align: center;
       background: #1f3c88;
       color: #fff;
-      padding: 12px;
+      padding: 14px;
       font-size: 16px;
       font-weight: bold;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+    }
+
+    .footer span {
+      margin: 0 12px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .footer span::before {
+      margin-right: 6px;
+    }
+
+    .footer .call::before {
+      content: "📞";
+    }
+
+    .footer .whatsapp::before {
+      content: "💬";
     }
   </style>
 </head>
@@ -159,7 +179,9 @@
       <div class="box">
         <h3>Our Mission & Photos</h3>
         <p class="mission">
-          Established in 2020, our CBSE school offers a modern, affordable education. We provide strong academic and moral values, guiding students to become responsible and compassionate members of society.
+          Established in 2020, our CBSE school offers a modern, affordable education. 
+          We provide strong academic and moral values, guiding students to become responsible 
+          and compassionate members of society.
         </p>
         <div class="photos">
           <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="School Photo 1">
@@ -171,7 +193,8 @@
     </div>
 
     <div class="footer">
-      📞 +91-7679779511
+      <span class="call">+91-7679779511</span>
+      <span class="whatsapp">+91-9936233366</span>
     </div>
   </div>
 </body>
