@@ -1,245 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prabhat Institute - A Fun Place to Learn</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Fredoka+One&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #2b5876; /* Dark Blue */
-            --accent-color: #f1c40f; /* Yellow Gold */
-            --secondary-color: #f6f9fc; /* Off-White */
-            --highlight-color: #ff914d; /* Coral Orange */
-            --blue-light: #83c7e6;
-            --green-light: #a2d729;
-            --pink-light: #e683a4;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center; /* Center vertically for the square shape */
-            min-height: 100vh;
-            background: radial-gradient(circle at 10% 20%, var(--secondary-color), #d1d8e0);
-            box-sizing: border-box;
-            color: var(--primary-color);
-        }
-        
-        /* Main container, perfect for a screenshot */
-        .poster-container {
-            width: 100%;
-            max-width: 800px;
-            aspect-ratio: 1 / 1; /* Makes it a perfect square */
-            background-color: #ffffff;
-            border-radius: 30px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            display: grid;
-            grid-template-rows: auto 1fr auto;
-            grid-template-columns: 1fr;
-            gap: 15px;
-            position: relative;
-            box-sizing: border-box;
-            border: 8px dashed var(--blue-light);
-            overflow: hidden; /* Hide overflow to prevent images from breaking out */
-        }
-
-        .header-section {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-
-        .header-section img {
-            width: 100px; /* Smaller logo */
-            height: auto;
-            border-radius: 50%;
-            border: 5px solid var(--accent-color);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-section h1 {
-            font-family: 'Fredoka One', cursive;
-            font-size: 2.5em; /* Smaller font size */
-            color: var(--primary-color);
-            margin: 5px 0 0;
-            letter-spacing: 2px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-section .tagline {
-            font-size: 1em; /* Smaller font size */
-            color: var(--highlight-color);
-            font-weight: 700;
-        }
-        
-        .header-section .location {
-            font-size: 0.7em;
-            font-weight: 600;
-            color: #7f8c8d;
-            margin-top: 5px;
-        }
-        
-        .admission-tag {
-            background-color: var(--highlight-color);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1em; /* Smaller font size */
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            margin: 0 auto;
-        }
-
-        .main-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            padding: 0 5px;
-        }
-
-        .info-card {
-            background-color: var(--secondary-color);
-            padding: 15px;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            display: flex;
-            flex-direction: column;
-        }
-
-        .info-card h2 {
-            font-family: 'Fredoka One', cursive;
-            font-size: 1.2em;
-            color: var(--primary-color);
-            margin-top: 0;
-            text-align: center;
-            border-bottom: 2px dashed var(--accent-color);
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-
-        .info-card p, .info-card ul {
-            font-size: 0.75em;
-            color: var(--text-dark);
-            text-align: center;
-        }
-
-        .info-card p {
-            flex-grow: 1; /* Make the mission text take up available space */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .facilities-list {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap; /* Allow wrapping */
-            justify-content: center;
-            gap: 5px;
-        }
-
-        .facilities-list li {
-            background-color: var(--blue-light);
-            color: white;
-            padding: 6px 10px;
-            border-radius: 20px;
-            font-weight: 600;
-            font-size: 0.7em;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-        }
-
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 5px;
-            margin-top: 10px;
-        }
-
-        .image-gallery img {
-            width: 100%;
-            height: 80px; /* Smaller images */
-            object-fit: cover;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            border: 3px solid var(--accent-color);
-        }
-
-        .contact-info {
-            text-align: center;
-            padding: 10px;
-            background-color: var(--primary-color);
-            color: var(--text-light);
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .contact-info p {
-            margin: 0;
-            font-size: 1.1em;
-            font-weight: 600;
-        }
-        
-        .contact-info a {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 600;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prabhat Institute Poster</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #fceabb, #f8b500);
+      color: #222;
+    }
+    .poster {
+      width: 900px;
+      margin: 30px auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      overflow: hidden;
+      padding: 20px 40px;
+    }
+    .header {
+      text-align: center;
+      padding: 20px;
+    }
+    .header h1 {
+      font-size: 48px;
+      color: #004aad;
+      margin: 0;
+      font-weight: 800;
+    }
+    .subhead {
+      font-size: 20px;
+      color: #f54254;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    .admission {
+      background: #ff2e63;
+      display: inline-block;
+      padding: 12px 24px;
+      border-radius: 30px;
+      color: #fff;
+      font-weight: bold;
+      margin: 20px 0;
+      font-size: 22px;
+    }
+    .images {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin: 30px 0;
+    }
+    .images img {
+      width: 200px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    }
+    .facilities {
+      margin: 20px 0;
+      padding: 20px;
+      background: #f1f7ff;
+      border-radius: 15px;
+    }
+    .facilities h2 {
+      font-size: 26px;
+      color: #004aad;
+      margin-bottom: 15px;
+    }
+    .facility {
+      background: #004aad;
+      color: #fff;
+      padding: 12px;
+      border-radius: 12px;
+      margin: 8px 0;
+      font-size: 18px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 18px;
+    }
+    .footer strong {
+      color: #ff2e63;
+    }
+  </style>
 </head>
 <body>
-    <div class="poster-container">
-        <div class="header-section">
-            <img src="https://prabhatinstitute.co.in/images/logo.png" alt="Prabhat Institute Logo">
-            <h1>PRABHAT INSTITUTE</h1>
-            <p class="tagline">A Fun Place to Learn & Grow!</p>
-            <p class="location">Saktinagar, Krishnanagar, Dist- Nadia, West Bengal</p>
-        </div>
-
-        <div class="admission-tag">
-            ADMISSIONS OPEN
-        </div>
-
-        <div class="main-content">
-            <div class="info-card">
-                <h2>Features & Facilities</h2>
-                <ul class="facilities-list">
-                    <li>Individual Care</li>
-                    <li>Activity Based Learning</li>
-                    <li>Learning with SMP App</li>
-                    <li>Weekly Tests in App</li>
-                    <li>Creative Projects</li>
-                    <li>Music & Dance</li>
-                    <li>Computer Classes</li>
-                    <li>Yoga Classes</li>
-                    <li>Sports Classes</li>
-                </ul>
-            </div>
-            
-            <div class="info-card">
-                <h2>Our Mission & Photos</h2>
-                <p>Established in 2020, our CBSE school offers a modern, affordable education. We provide strong academic and moral values, guiding students to become responsible and compassionate members of society.</p>
-                <div class="image-gallery">
-                    <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="Children in classroom">
-                    <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" alt="Students with teacher">
-                    <img src="https://i.pinimg.com/736x/0d/08/d4/0d08d4f79e032fe06f53c0a758b6e222.jpg" alt="Kids engaging in activity">
-                    <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" alt="Happy students">
-                </div>
-            </div>
-        </div>
-
-        <div class="contact-info">
-            <p>Contact Us: <a href="tel:+917679779511">+91-7679779511</a></p>
-        </div>
+  <div class="poster">
+    <div class="header">
+      <h1>PRABHAT INSTITUTE</h1>
+      <div class="subhead">C.B.S.E. Curriculum Based • Best School for Your Child</div>
+      <div class="admission">Admission Going On 2025</div>
     </div>
+
+    <div class="images">
+      <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="Kids Activity 1">
+      <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" alt="Kids Activity 2">
+      <img src="https://i.pinimg.com/736x/0d/08/d4/0d08d4f79e032fe06f53c0a758b6e222.jpg" alt="Kids Activity 3">
+      <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" alt="Kids Activity 4">
+    </div>
+
+    <div class="facilities">
+      <h2>Facilities</h2>
+      <div class="facility">✔ Individual Care</div>
+      <div class="facility">✔ Activity Based Learning</div>
+      <div class="facility">✔ Learning with SMP App</div>
+      <div class="facility">✔ Weekly Test in App</div>
+      <div class="facility">✔ Creative Project</div>
+      <div class="facility">✔ Music, Dance, Computer, Yoga, Sports Classes</div>
+    </div>
+
+    <div class="footer">
+      <p><strong>Address:</strong> Ram Gopal Chetlangiya Road, Krishnanagar, India, 741102</p>
+      <p><strong>Call:</strong> +91-7679779511 | <strong>WhatsApp:</strong> +91-993623366</p>
+      <p>C.B.S.E. Curriculum Based School. From Nursery to Class XII.</p>
+    </div>
+  </div>
 </body>
 </html>
