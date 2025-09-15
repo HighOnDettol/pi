@@ -17,7 +17,8 @@
       width: 210mm;
       height: 297mm;
       margin: auto;
-      background: rgba(255, 255, 255, 0.95);
+      background: url('https://i.pinimg.com/736x/28/12/82/28128244582034380bdaefbdf017680f.jpg') center center;
+      background-size: cover;
       padding: 0;
       box-sizing: border-box;
       border: 3px dashed #87ceeb;
@@ -26,10 +27,26 @@
       overflow: hidden;
     }
 
+    .poster::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.75);
+      pointer-events: none;
+      z-index: 0;
+    }
+
     .header {
       text-align: center;
       padding: 20px;
       background: rgba(255, 255, 255, 0.9);
+      border-radius: 10px;
+      margin: 15px;
+      position: relative;
+      z-index: 1;
     }
 
     .header img {
@@ -82,9 +99,10 @@
     .content {
       display: flex;
       justify-content: space-between;
-      padding: 20px;
+      padding: 20px 20px 0 20px;
       gap: 20px;
-      height: calc(100% - 200px);
+      position: relative;
+      z-index: 1;
     }
 
     .left-box {
@@ -135,14 +153,20 @@
       font-size: 14px;
       line-height: 1.7;
       text-align: justify;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       color: #444;
+    }
+
+    .photos-section {
+      padding: 0 20px 20px 20px;
+      position: relative;
+      z-index: 1;
     }
 
     .photos-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
     }
 
     .photos-grid img {
@@ -224,18 +248,21 @@
       </div>
 
       <div class="right-box">
-        <h3>Our Mission & Photos</h3>
+        <h3>Our Mission</h3>
         <p class="mission">
           Established in 2020, our CBSE school offers a modern, affordable education. 
           We provide strong academic and moral values, guiding students to become 
           responsible and compassionate members of society.
         </p>
-        <div class="photos-grid">
-          <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="School Activity 1">
-          <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" alt="School Activity 2">
-          <img src="https://i.pinimg.com/736x/0d/08/d4/0d08d4f79e032fe06f53c0a758b6e222.jpg" alt="School Activity 3">
-          <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" alt="School Activity 4">
-        </div>
+      </div>
+    </div>
+
+    <div class="photos-section">
+      <div class="photos-grid">
+        <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="School Activity 1">
+        <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" alt="School Activity 2">
+        <img src="https://i.pinimg.com/736x/0d/08/d4/0d08d4f79e032fe06f53c0a758b6e222.jpg" alt="School Activity 3">
+        <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" alt="School Activity 4">
       </div>
     </div>
 
