@@ -6,186 +6,161 @@
   <title>Prabhat Institute Poster</title>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #ffecd2, #fcb69f);
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      background: #fdf6f9;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
     }
     .poster {
-      width: 1000px;
-      height: 1000px;
-      background: #fff url('https://i.pinimg.com/736x/9d/c3/2a/9dc32a3166a28cbd65a5a13942a0fdee.jpg') no-repeat center/cover;
-      border-radius: 40px;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.25);
+      width: 210mm;
+      height: 297mm;
+      background: linear-gradient(to bottom, #fff8fb, #fbeeff);
+      border: 8px solid #f8c6d8;
+      border-radius: 15px;
+      position: relative;
       overflow: hidden;
-      padding: 30px;
-      position: relative;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      padding: 15mm;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
-    .overlay {
-      background: rgba(255,255,255,0.92);
+    .poster::before {
+      content: "";
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      border-radius: 40px;
-    }
-    .content {
-      position: relative;
-      z-index: 2;
+      top: 0;
+      left: 0;
+      width: 100%;
       height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      background: url('https://www.shutterstock.com/image-vector/group-kids-playing-game-on-600nw-1681963759.jpg') center/cover no-repeat;
+      opacity: 0.07;
+      z-index: 0;
     }
-    .header {
+    .logo, .title, .subtitle, .images, .facilities, .contact {
+      position: relative;
+      z-index: 1;
+    }
+    .logo {
       text-align: center;
+      margin-bottom: 8px;
     }
-    .header img {
-      width: 120px;
-      margin-bottom: 15px;
+    .logo img {
+      height: 70px;
     }
-    .header h1 {
-      font-size: 56px;
-      color: #004aad;
-      margin: 0;
-      font-weight: 800;
-    }
-    .subhead {
-      font-size: 22px;
-      color: #f54254;
-      font-weight: 600;
-      margin-top: 8px;
-    }
-    .admission {
-      background: #ff2e63;
-      display: inline-block;
-      padding: 16px 36px;
-      border-radius: 50px;
-      color: #fff;
+    .title {
+      text-align: center;
+      font-size: 28px;
+      color: #d6336c;
       font-weight: bold;
-      margin: 25px auto;
-      font-size: 26px;
-      animation: pulse 1.5s infinite;
+      margin-bottom: 6px;
     }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
-      100% { transform: scale(1); }
+    .subtitle {
+      text-align: center;
+      font-size: 16px;
+      color: #555;
+      margin-bottom: 12px;
     }
     .images {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-      margin: 20px auto;
-      width: 85%;
+      gap: 10px;
+      justify-items: center;
+      margin-bottom: 12px;
     }
     .images img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      border-radius: 20px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-      transition: transform 0.3s;
-    }
-    .images img:hover {
-      transform: scale(1.05);
+      width: 90%;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
     }
     .facilities {
-      margin: 20px auto;
-      padding: 20px;
-      background: #f1f7ff;
-      border-radius: 25px;
-      width: 85%;
+      background: #fff0f6;
+      border-radius: 10px;
+      padding: 10px;
+      font-size: 14px;
+      line-height: 1.4;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
-    .facilities h2 {
-      font-size: 30px;
-      color: #004aad;
-      margin-bottom: 15px;
+    .facilities h3 {
       text-align: center;
+      color: #c2255c;
+      margin-bottom: 6px;
+      font-size: 16px;
     }
-    .facility {
-      background: #004aad;
-      color: #fff;
-      padding: 14px;
-      border-radius: 14px;
-      margin: 10px 0;
-      font-size: 18px;
+    .contact {
+      background: #ffe0ec;
+      border-top: 4px solid #f497b6;
+      border-radius: 10px;
+      padding: 10px;
       text-align: center;
-      transition: transform 0.3s, background 0.3s;
+      font-size: 14px;
+      color: #333;
+      font-weight: bold;
     }
-    .facility:hover {
-      transform: translateY(-5px);
-      background: #0066cc;
-    }
-    .footer {
-      text-align: center;
-      font-size: 18px;
-      line-height: 1.6;
-      margin-top: 20px;
-    }
-    .footer strong {
-      color: #ff2e63;
-    }
-    .decorations {
+    /* Cute background decor */
+    .decor {
       position: absolute;
-      bottom: 15px;
-      left: 0;
-      right: 0;
-      display: flex;
-      justify-content: space-evenly;
-      z-index: 1;
-      opacity: 0.8;
+      pointer-events: none;
+      opacity: 0.15;
+      z-index: 0;
     }
-    .decorations img {
-      width: 150px;
-      height: auto;
+    .flower {
+      top: 15px;
+      left: 15px;
+      width: 60px;
+    }
+    .balloons {
+      top: 40px;
+      right: 20px;
+      width: 80px;
+    }
+    .kids {
+      bottom: 100px;
+      left: 20px;
+      width: 100px;
+    }
+    .study {
+      bottom: 110px;
+      right: 20px;
+      width: 100px;
     }
   </style>
 </head>
 <body>
   <div class="poster">
-    <div class="overlay"></div>
-    <div class="content">
-      <div class="header">
-        <img src="https://prabhatinstitute.co.in/images/logo.png" alt="Prabhat Institute Logo">
-        <h1>PRABHAT INSTITUTE</h1>
-        <div class="subhead">C.B.S.E. Curriculum Based • Best School for Your Child</div>
-        <div class="admission">Admission Going On 2025</div>
-      </div>
+    <!-- Decorative images -->
+    <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" class="decor flower" alt="Flowers">
+    <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" class="decor balloons" alt="Balloons">
+    <img src="https://i.pinimg.com/736x/0d/08/d4/0d08d4f79e032fe06f53c0a758b6e222.jpg" class="decor kids" alt="Kids Playing">
+    <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" class="decor study" alt="Kids Studying">
 
-      <div class="images">
-        <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="Kids Activity 1">
-        <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" alt="Kids Activity 2">
-        <img src="https://i.pinimg.com/736x/0d/08/d4/0d08d4f79e032fe06f53c0a758b6e222.jpg" alt="Kids Activity 3">
-        <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" alt="Kids Activity 4">
-      </div>
+    <div class="logo">
+      <img src="https://prabhatinstitute.co.in/images/logo.png" alt="School Logo">
+    </div>
+    <div class="title">Prabhat Institute</div>
+    <div class="subtitle">Nurturing Young Minds with Care and Creativity</div>
 
-      <div class="facilities">
-        <h2>Facilities</h2>
-        <div class="facility">✔ Individual Care</div>
-        <div class="facility">✔ Activity Based Learning</div>
-        <div class="facility">✔ Learning with SMP App</div>
-        <div class="facility">✔ Weekly Test in App</div>
-        <div class="facility">✔ Creative Project</div>
-        <div class="facility">✔ Music, Dance, Computer, Yoga, Sports Classes</div>
-      </div>
-
-      <div class="footer">
-        <p><strong>Address:</strong> Ram Gopal Chetlangiya Road, Krishnanagar, India, 741102</p>
-        <p><strong>Call:</strong> +91-7679779511 | <strong>WhatsApp:</strong> +91-993623366</p>
-        <p>C.B.S.E. Curriculum Based School. From Nursery to Class XII.</p>
-      </div>
+    <div class="images">
+      <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="Poster Image 1">
+      <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" alt="Poster Image 2">
+      <img src="https://i.pinimg.com/736x/0d/08/d4/0d08d4f79e032fe06f53c0a758b6e222.jpg" alt="Poster Image 3">
+      <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" alt="Poster Image 4">
     </div>
 
-    <div class="decorations">
-      <img src="https://i.pinimg.com/736x/59/ab/62/59ab626c4a8aa7b5665f062eebf61cf7.jpg" alt="Flowers">
-      <img src="https://i.pinimg.com/736x/36/6f/55/366f55eec3e9f19173f0029be7f3bb34.jpg" alt="Kids Balloons">
-      <img src="https://i.pinimg.com/736x/25/f5/dc/25f5dcd5ff8367b734caed9b6a2f7f41.jpg" alt="Kids Studying">
+    <div class="facilities">
+      <h3>Our Facilities</h3>
+      • Spacious Classrooms<br>
+      • Smart Learning Tools<br>
+      • Creative Activities<br>
+      • Play Area & Sports
+    </div>
+
+    <div class="contact">
+      📞 +91 98765 43210 | ✉️ info@prabhatinstitute.co.in
     </div>
   </div>
 </body>
