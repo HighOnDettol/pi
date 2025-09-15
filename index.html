@@ -18,11 +18,26 @@
     .poster {
       width: 1000px;
       height: 1000px;
-      background: #fff;
+      background: url('https://i.pinimg.com/736x/9d/c3/2a/9dc32a3166a28cbd65a5a13942a0fdee.jpg') no-repeat center/cover;
       border-radius: 30px;
       box-shadow: 0 12px 25px rgba(0,0,0,0.25);
       overflow: hidden;
       padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .overlay {
+      background: rgba(255,255,255,0.9);
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      border-radius: 30px;
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+      height: 100%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -75,6 +90,20 @@
       border-radius: 20px;
       box-shadow: 0 6px 15px rgba(0,0,0,0.2);
     }
+    .decorations {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      right: 10px;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1;
+    }
+    .decorations img {
+      width: 200px;
+      height: auto;
+      opacity: 0.9;
+    }
     .facilities {
       margin: 10px 0;
       padding: 20px;
@@ -114,34 +143,43 @@
 </head>
 <body>
   <div class="poster">
-    <div class="header">
-      <img src="https://prabhatinstitute.co.in/images/logo.png" alt="Prabhat Institute Logo">
-      <h1>PRABHAT INSTITUTE</h1>
-      <div class="subhead">C.B.S.E. Curriculum Based • Best School for Your Child</div>
-      <div class="admission">Admission Going On 2025</div>
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="header">
+        <img src="https://prabhatinstitute.co.in/images/logo.png" alt="Prabhat Institute Logo">
+        <h1>PRABHAT INSTITUTE</h1>
+        <div class="subhead">C.B.S.E. Curriculum Based • Best School for Your Child</div>
+        <div class="admission">Admission Going On 2025</div>
+      </div>
+
+      <div class="images">
+        <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="Kids Activity 1">
+        <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" alt="Kids Activity 2">
+        <img src="https://i.pinimg.com/736x/0d/08/d4/0d08d4f79e032fe06f53c0a758b6e222.jpg" alt="Kids Activity 3">
+        <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" alt="Kids Activity 4">
+      </div>
+
+      <div class="facilities">
+        <h2>Facilities</h2>
+        <div class="facility">✔ Individual Care</div>
+        <div class="facility">✔ Activity Based Learning</div>
+        <div class="facility">✔ Learning with SMP App</div>
+        <div class="facility">✔ Weekly Test in App</div>
+        <div class="facility">✔ Creative Project</div>
+        <div class="facility">✔ Music, Dance, Computer, Yoga, Sports Classes</div>
+      </div>
+
+      <div class="footer">
+        <p><strong>Address:</strong> Ram Gopal Chetlangiya Road, Krishnanagar, India, 741102</p>
+        <p><strong>Call:</strong> +91-7679779511 | <strong>WhatsApp:</strong> +91-993623366</p>
+        <p>C.B.S.E. Curriculum Based School. From Nursery to Class XII.</p>
+      </div>
     </div>
 
-    <div class="images">
-      <img src="https://i.pinimg.com/736x/dd/80/d2/dd80d284d1e233fbe203fb8d0f3f23da.jpg" alt="Kids Activity 1">
-      <img src="https://i.pinimg.com/736x/92/6a/e7/926ae79c33c686f0cc9f430e58dc9d33.jpg" alt="Kids Activity 2">
-      <img src="https://i.pinimg.com/736x/0d/08/d4/0d08d4f79e032fe06f53c0a758b6e222.jpg" alt="Kids Activity 3">
-      <img src="https://i.pinimg.com/736x/a8/b7/dc/a8b7dc8b1f74f03d1856458fa120559d.jpg" alt="Kids Activity 4">
-    </div>
-
-    <div class="facilities">
-      <h2>Facilities</h2>
-      <div class="facility">✔ Individual Care</div>
-      <div class="facility">✔ Activity Based Learning</div>
-      <div class="facility">✔ Learning with SMP App</div>
-      <div class="facility">✔ Weekly Test in App</div>
-      <div class="facility">✔ Creative Project</div>
-      <div class="facility">✔ Music, Dance, Computer, Yoga, Sports Classes</div>
-    </div>
-
-    <div class="footer">
-      <p><strong>Address:</strong> Ram Gopal Chetlangiya Road, Krishnanagar, India, 741102</p>
-      <p><strong>Call:</strong> +91-7679779511 | <strong>WhatsApp:</strong> +91-993623366</p>
-      <p>C.B.S.E. Curriculum Based School. From Nursery to Class XII.</p>
+    <div class="decorations">
+      <img src="https://i.pinimg.com/736x/59/ab/62/59ab626c4a8aa7b5665f062eebf61cf7.jpg" alt="Flowers">
+      <img src="https://i.pinimg.com/736x/36/6f/55/366f55eec3e9f19173f0029be7f3bb34.jpg" alt="Kids Balloons">
+      <img src="https://i.pinimg.com/736x/25/f5/dc/25f5dcd5ff8367b734caed9b6a2f7f41.jpg" alt="Kids Studying">
     </div>
   </div>
 </body>
